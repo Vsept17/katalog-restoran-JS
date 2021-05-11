@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Cari Resto Yuk!</title>
+</head>
+
+<body>
+  <a href="#maincontent" class="skip-link">Skip To Content</a>
+  <header>
+    <nav>
+      <div class="nav">
+        <h1 class="brand">Cari Resto Yuk!</h1>
+        <button class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="list" id="list">
+          <li class="nav__item">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Favorite</a>
+          </li>
+          <li class="nav__item">
+            <a href="https://github.com/Vsept17">About us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="titleHero">
+        <h2 class="heroTitle">Yuk mulai jelajahi restoran favorit kamu disini</h2>
+        <p class="heroTitle2">Temukan restoran dengan berbagai macam keunikan dan ciri khasnya</p>
+      </div>
+      <img class="heroImg" src="./images/heros/hero-image_2.jpg" width="100%" alt="hero" />
+    </div>
+  </header>
+  <section id="maincontent">
+    <p class="explore">Explore Restoran</p>
+    <div id="listResto" class="listResto"></div>
+  </section>
+  <footer>
+    <p class="copyright">Copyright © 2021 - Cari Resto Yuk!</p>
+  </footer>
+</body>
+
+<script type="text/javascript" src="../scripts/api.js"></script>
+<script>
+
+  const menuToggle = document.querySelector('.menu-toggle input');
+  const nav = document.querySelector('.nav ul')
+  menuToggle.addEventListener('click', function () {
+    nav.classList.toggle('slide');
+  });
+</script>
+
+</html>

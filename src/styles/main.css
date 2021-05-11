@@ -1,0 +1,258 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f21170;
+  font-family: "Raleway", sans-serif;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  /* min-width: 44px;
+  min-height: 44px; */
+}
+
+.skip-link:focus {
+  top: 0;
+  display: block;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+input:focus {
+  background-color: #bf1722;
+  outline: 1px solid black;
+  z-index: 100;
+}
+
+/* navigation */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  background-color: #ff5200;
+  width: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: max-content;
+  align-items: center;
+}
+.brand {
+  color: white;
+  padding: 19px;
+}
+.nav ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.icon {
+  display: none;
+}
+
+.list a {
+  padding: 24px 5px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.nav__item a:hover {
+  background-color: #fa9905;
+  color: black;
+}
+
+/* hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  background-color: none;
+  justify-content: space-evenly;
+  position: relative;
+  align-items: center;
+}
+.menu-toggle input {
+  position: absolute;
+  /* width: 28px;
+  height: 22px; */
+  min-height: 44px;
+  min-width: 44px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.5s;
+  z-index: 3;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  width: 38px;
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  width: 38px;
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* hero image */
+
+.hero {
+  display: flex;
+  height: 450px;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: black;
+}
+.heroImg {
+  opacity: 0.5;
+}
+
+.titleHero {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.heroTitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+.heroTitle2 {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+/* Explore Reastaurant */
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding: 20px 30px;
+  justify-content: center;
+}
+
+.explore {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.listResto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+}
+
+.resto {
+  background-color: #fa9905;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.detailResto {
+  padding: 10px;
+  text-align: left;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detailResto a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.citycontainer {
+  height: 200px;
+  overflow: hidden;
+}
+.city {
+  color: white;
+  font-size: medium;
+  font-weight: 600;
+  opacity: unset;
+}
+.citybg {
+  position: absolute;
+  padding: 10px 15px;
+  background-color: black;
+  opacity: 0.5;
+  margin-top: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  bottom: 0;
+  background-color: #72147e;
+}
+
+.copyright {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
