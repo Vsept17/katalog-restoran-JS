@@ -13,17 +13,17 @@
 
 <body>
   <a href="#maincontent" class="skip-link">Skip To Content</a>
-  <header>
+  <header class="app-bar">
     <nav>
       <div class="nav">
         <h1 class="brand">Cari Resto Yuk!</h1>
-        <button class="menu-toggle">
+        <button class="menu-toggle" id="hamburgerBtn">
           <input type="checkbox" />
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul class="list" id="list">
+        <ul class="list" id="listDrawer">
           <li class="nav__item">
             <a href="/">Home</a>
           </li>
@@ -44,10 +44,10 @@
       <img class="heroImg" src="./images/heros/hero-image_2.jpg" width="100%" alt="hero" />
     </div>
   </header>
-  <section id="maincontent">
+  <main id="mainContent">
     <p class="explore">Explore Restoran</p>
     <div id="listResto" class="listResto"></div>
-  </section>
+  </main>
   <footer>
     <p class="copyright">Copyright © 2021 - Cari Resto Yuk!</p>
   </footer>
