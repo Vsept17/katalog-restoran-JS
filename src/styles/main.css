@@ -183,7 +183,9 @@ section {
   justify-content: center;
 }
 
+
 .explore {
+  align-self: center;
   color: white;
   font-size: 24px;
   font-weight: 700;

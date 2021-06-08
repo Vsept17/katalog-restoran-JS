@@ -1,11 +1,11 @@
 const DetailRestaurant = {
-    async render() {
+  async render() {
+    return `
+        <h1>Ini detail</h1>
+        `;
+  },
 
-    },
-
-    async afterRender() {
-        
-    }
+  async afterRender() {},
 };
 
 export default DetailRestaurant;
