@@ -32,15 +32,15 @@ const detailRestoTemp = (detail) => `
   <div class="imgDetail">
     <img  src="${IMG_API + detail.pictureId}" alt="${detail.name}" />
   </div>
-<div class="dataResto">
-<div class="ratingContainer">
-<img src="./images/rating.png" style="width:10%" alt="ratings"/>
-<p class="rating">${detail.rating}</p>
-</div>
-<h1>${detail.name}</h1>
-<h2>Alamat: ${detail.address}, ${detail.city}</h2>
-<p>${detail.description}</p>
-</div>
+  <div class="dataResto">
+    <div class="ratingContainer">
+      <img src="./images/rating.png" style="width:10%" alt="ratings"/>
+      <p class="rating">${detail.rating}</p>
+    </div>
+  <h1>${detail.name}</h1>
+  <h2>Alamat: ${detail.address}, ${detail.city}</h2>
+  <p>${detail.description}</p>
+  </div>
 
 
 `;
@@ -54,9 +54,9 @@ const drinkTemp = ({ name }) => `<p>${name}</p>`;
 const reviewTemp = ({ name, review, date }) =>
   `
   <div class="detailReview">
-  <h4>${name}</h4>
-  <p>${date}</p>
-  <p>${review}</p>
+    <h4>${name}</h4>
+    <p>${date}</p>
+    <p>${review}</p>
   </div>
   `;
 
