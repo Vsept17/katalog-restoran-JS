@@ -13,18 +13,29 @@ const DetailRestaurant = {
   async render() {
     return `
         <div class="detailResto" id="detailResto">
-        <div class="headDetail" id="headDetail">
+          <div class="headDetail" id="headDetail"></div>
+          <div class="midContainer">
+          <div class="categories" id="categories">
+            <p>Kategori Menu: </p>
+          </div>
+          <div id="menus" class="menus">
+            <div class="menusContainer">
+              <h3>Foods Menu:</h3>
+              <div id="foods"></div>
+            </div>
+            <div class="menusContainer">
+              <h3>Drinks Menu:</h3>
+              <div id="drinks"></div>
+            </div>
+          </div>
+          <div class="reviewContainer">
+          <h3>Customer Review: </h3>
+          <div id="reviews"></div>
+          </div>
         </div>
-        <div id="ratings"></div>
-        <div class="categories" id="categories">
-        <p>Kategori Menu: </p>
         </div>
-        <div id="menus" class="menus">
-        <div id="foods"></div>
-        <div id="drinks"></div>
-        </div>
-        <div id="reviews"></div>
-        </div>
+        
+        
         `;
   },
 
@@ -40,11 +51,9 @@ const DetailRestaurant = {
     const domCategories = document.querySelector("#categories");
     const domFoods = document.querySelector("#foods");
     const domDrinks = document.querySelector("#drinks");
-    const domRatings = document.querySelector("#ratings");
     const domReview = document.querySelector("#reviews");
 
     restoContainer.innerHTML += detailRestoTemp(getDetailResto);
-    domRatings.innerHTML += ratingTemp(getDetailResto);
     getCategories.map((categories) => {
       domCategories.innerHTML += categoriesRestoTemp(categories);
     });

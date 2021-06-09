@@ -222,6 +222,10 @@ section {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.toDetail:hover{
+  color: #bf1722;
+}
 .citycontainer {
   height: 200px;
   overflow: hidden;
@@ -288,6 +292,16 @@ footer {
   width: 100%;
 }
 
+.ratingContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.rating{
+  font-size: 22px;
+  font-weight: bold;
+}
+
 .categories{
   display: flex;
   flex-direction: row;
@@ -298,4 +312,42 @@ footer {
   font-size: 32px;
   font-weight: 700;
   margin-right: 10px;
+}
+
+.midContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  margin: 20px 0;
+  border-radius: 15px;
+  background-color: #fa9905;
+  color: white;
+
+}
+
+.menus{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.menusContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.menusContainer h3{
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.detailReview{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  margin: 10px 0;
+  border-radius: 25px;
+  padding: 15px 20px;
 }
