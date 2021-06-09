@@ -113,4 +113,15 @@
   .copyright {
     font-size: 12px;
   }
+
+
+  /* Detail Resto */
+
+  .detailResto{
+    padding: 10px 20px;
+  }
+  .imgDetail img{
+    border-radius: 10px;
+    width: 100%;
+  }
 }

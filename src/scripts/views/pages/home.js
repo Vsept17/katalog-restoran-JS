@@ -20,7 +20,6 @@ const Home = {
 
   async afterRender() {
     const listRestaurant = await RestaurantSource.listRestaurant();
-    console.log("ini data", listRestaurant);
     const restaurantContainer = document.querySelector("#listResto");
     listRestaurant.forEach((resto) => {
       restaurantContainer.innerHTML += listRestoTemplate(resto);

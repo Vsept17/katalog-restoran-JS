@@ -203,7 +203,7 @@ section {
   margin: 10px;
 }
 
-.detailResto {
+.infoResto {
   padding: 10px;
   text-align: left;
   color: white;
@@ -211,7 +211,7 @@ section {
   text-overflow: ellipsis;
 }
 
-.detailResto a {
+.infoResto a {
   display: inline-block;
   text-decoration: none;
   color: white;
@@ -257,4 +257,45 @@ footer {
   color: white;
   font-size: 18px;
   font-weight: 400;
+}
+
+
+/* Styling detail */
+
+.detailResto {
+  padding: 30px 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.headDetail{
+  display: flex;
+  flex-direction: row;
+}
+
+.dataResto{
+  width: 30%;
+}
+
+.imgDetail{
+  padding-right: 25px;
+  width: 70%;
+}
+
+.imgDetail img{
+  border-radius: 10px;
+  width: 100%;
+}
+
+.categories{
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+
+.categories p{
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 10px;
 }
