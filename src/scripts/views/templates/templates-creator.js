@@ -60,6 +60,35 @@ const reviewTemp = ({ name, review, date }) =>
   </div>
   `;
 
+const createLikeButtonTemplate = () => `
+  <button aria-label="Menyukai restoran" id="likeBtn" class="like">
+     <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="Tidak suka restoran" id="likeBtn" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+const LikedRestaurantTemp = ({id, name, city, picture, rating, description}) => `
+
+<div class="resto" id="${name}">
+    <div class="citycontainer">
+          <div class="citybg">
+            <p class="city">${city}</p>
+          </div>
+          <img src="${IMG_API + picture}" width="100%"
+            alt="${name}" />
+    </div>
+    <div class="infoResto">
+        <p>Rating: ${rating}</p>
+        <a class="toDetail" href="#/detail/${id}">${name}</a>
+    </div>
+</div>
+`;
+
 export {
   listRestoTemplate,
   detailRestoTemp,
@@ -67,4 +96,7 @@ export {
   foodsTemp,
   drinkTemp,
   reviewTemp,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+  LikedRestaurantTemp,
 };

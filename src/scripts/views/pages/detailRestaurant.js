@@ -4,10 +4,10 @@ import {
   detailRestoTemp,
   foodsTemp,
   drinkTemp,
-  ratingTemp,
   reviewTemp,
 } from "../templates/templates-creator";
 import UrlParser from "../../routes/url-parser";
+import LikeBtnInitiator from "../../utils/likeBtnInitiator";
 
 const DetailRestaurant = {
   async render() {
@@ -29,13 +29,12 @@ const DetailRestaurant = {
             </div>
           </div>
           <div class="reviewContainer">
-          <h3>Customer Review: </h3>
-          <div id="reviews"></div>
+            <h3>Customer Review: </h3>
+            <div id="reviews"></div>
           </div>
-        </div>
-        </div>
-        
-        
+          </div>
+          </div>
+          <div id="likeBtn"></div>
         `;
   },
 
@@ -66,6 +65,18 @@ const DetailRestaurant = {
     review.map((review) => {
       domReview.innerHTML += reviewTemp(review);
     });
+
+    LikeBtnInitiator.init({
+      likeButton: document.querySelector('#likeBtn'),
+      restaurant: {
+        id: getDetailResto.id,
+        name: getDetailResto.name,
+        address: getDetailResto.address,
+        city: getDetailResto.city,
+        picture: getDetailResto.pictureId,
+        rating: getDetailResto.rating,
+      },
+    })
   },
 };
 
