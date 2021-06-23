@@ -120,8 +120,36 @@
   .detailResto{
     padding: 10px 20px;
   }
+  .imgDetail{
+    width: 100%;
+    padding: 0;
+  }
   .imgDetail img{
     border-radius: 10px;
     width: 100%;
+  }
+  .headDetail{
+    flex-direction: column;
+  }
+  .dataResto{
+    width: 100%;
+  }
+  .midContainer{
+    padding: 20px 20px;
+  }
+  .categories p{
+    font-size: 15px;
+    font-weight: 700;
+    /* margin-right: 2px; */
+  }
+  .menus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Favorite */
+  .favContainer{
+    padding: 20px 20px;
   }
 }

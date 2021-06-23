@@ -1,40 +1,43 @@
-import RestaurantSource from "../../data/restaurant-source";
+/* eslint-disable no-shadow */
+/* eslint-disable array-callback-return */
+/* eslint-disable prefer-destructuring */
+import RestaurantSource from '../../data/restaurant-source';
 import {
   categoriesRestoTemp,
   detailRestoTemp,
   foodsTemp,
   drinkTemp,
   reviewTemp,
-} from "../templates/templates-creator";
-import UrlParser from "../../routes/url-parser";
-import LikeBtnInitiator from "../../utils/likeBtnInitiator";
+} from '../templates/templates-creator';
+import UrlParser from '../../routes/url-parser';
+import LikeBtnInitiator from '../../utils/likeBtnInitiator';
 
 const DetailRestaurant = {
   async render() {
     return `
-        <div class="detailResto" id="detailResto">
-          <div class="headDetail" id="headDetail"></div>
-          <div class="midContainer">
-          <div class="categories" id="categories">
+        <div class='detailResto' id='detailResto'>
+          <div class='headDetail' id='headDetail'></div>
+          <div class='midContainer'>
+          <div class='categories' id='categories'>
             <p>Kategori Menu: </p>
           </div>
-          <div id="menus" class="menus">
-            <div class="menusContainer">
+          <div id='menus' class='menus'>
+            <div class='menusContainer'>
               <h3>Foods Menu:</h3>
-              <div id="foods"></div>
+              <div id='foods'></div>
             </div>
-            <div class="menusContainer">
+            <div class='menusContainer'>
               <h3>Drinks Menu:</h3>
-              <div id="drinks"></div>
+              <div id='drinks'></div>
             </div>
           </div>
-          <div class="reviewContainer">
+          <div class='reviewContainer'>
             <h3>Customer Review: </h3>
-            <div id="reviews"></div>
+            <div id='reviews'></div>
           </div>
           </div>
+          <div id='likeBtn'></div>
           </div>
-          <div id="likeBtn"></div>
         `;
   },
 
@@ -46,11 +49,11 @@ const DetailRestaurant = {
     const foods = getMenusresto.foods;
     const drinks = getMenusresto.drinks;
     const review = getDetailResto.customerReviews;
-    const restoContainer = document.querySelector("#headDetail");
-    const domCategories = document.querySelector("#categories");
-    const domFoods = document.querySelector("#foods");
-    const domDrinks = document.querySelector("#drinks");
-    const domReview = document.querySelector("#reviews");
+    const restoContainer = document.querySelector('#headDetail');
+    const domCategories = document.querySelector('#categories');
+    const domFoods = document.querySelector('#foods');
+    const domDrinks = document.querySelector('#drinks');
+    const domReview = document.querySelector('#reviews');
 
     restoContainer.innerHTML += detailRestoTemp(getDetailResto);
     getCategories.map((categories) => {
@@ -76,7 +79,7 @@ const DetailRestaurant = {
         picture: getDetailResto.pictureId,
         rating: getDetailResto.rating,
       },
-    })
+    });
   },
 };
 

@@ -1,4 +1,7 @@
-import CONFIG from "../globals/config";
+/* eslint-disable no-unused-expressions */
+/* eslint-disable array-callback-return */
+/* eslint-disable no-underscore-dangle */
+import CONFIG from '../globals/config';
 
 const Cachehelper = {
   async cachingAppShell(requests) {
