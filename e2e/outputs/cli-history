@@ -1,0 +1,5 @@
+
+
+<<< Recorded commands on Sun Jun 27 2021 14:30:50 GMT+0700 (Western Indonesia Time)
+I.click('.nav__item_fav')
+I.click('.infoResto a')
