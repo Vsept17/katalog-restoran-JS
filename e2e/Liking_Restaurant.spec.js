@@ -4,7 +4,7 @@ Feature("Liking Restaurant");
 
 const assert = require("assert");
 
-Scenario("Alur menyukai restaurant", async ({ I }) => {
+Scenario("Like a Restaurant Step by Step", async ({ I }) => {
   I.amOnPage("/");
   I.seeElement(".toDetail");
 

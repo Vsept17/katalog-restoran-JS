@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 
 const target = path.resolve(__dirname, "src/public/images/heros");
+// const target2 = path.resolve(__dirname, "src/public/images");
 const destination = path.resolve(__dirname, "dist/images");
 
 if (!fs.existsSync(destination)) {
@@ -46,4 +47,23 @@ fs.readdirSync(target).forEach((image) => {
         `${destination}/${image.split(".").slice(0, -1).join(".")}-small.jpg`
       )
     );
+    sharp(`${target}/${image}`)
+    .resize(30)
+    .toFile(
+      path.resolve(
+        __dirname,
+        `${destination}/${image.split(".").slice(0, -1).join(".")}-xsmall.png`
+      )
+    );
 });
+
+// fs.readdirSync(target2).forEach((image) => {
+//   sharp(`${target2}/${image}`)
+//     .resize(128)
+//     .toFile(
+//       path.resolve(
+//         __dirname,
+//         `${destination}/${image.split(".").slice(0, -1).join(".")}-xsmall.png`
+//       )
+//     );
+// });

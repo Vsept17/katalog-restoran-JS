@@ -35,7 +35,10 @@ const detailRestoTemp = (detail) => `
   </div>
   <div class='dataResto'>
     <div class='ratingContainer'>
-      <img src='./images/rating.png' style='width:10%' alt='ratings'/>
+      <picture>
+      <source media="(max-width: 30px)" srcset="./images/rating-xsmall.png">
+      <img src='./images/rating-xsmall.png' style='width=10%' alt='ratings'/>
+      </picture>
       <p class='rating'>${detail.rating}</p>
     </div>
   <h1>${detail.name}</h1>

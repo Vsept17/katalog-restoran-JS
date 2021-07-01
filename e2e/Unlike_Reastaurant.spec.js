@@ -6,10 +6,9 @@ Feature("Unlike Restaurant");
 
 const assert = require("assert");
 
-Scenario("Cancel Restaurant", async ({ I }) => {
+Scenario("Unlike Restaurant Step by step", async ({ I }) => {
   I.amOnPage("/");
   I.seeElement(".toDetail");
-  //   I.click(locate('.toDetail').first());
 
   const firstFilm = locate(".toDetail").first();
   const firstFIlmTitle = await I.grabTextFrom(firstFilm);
@@ -32,4 +31,9 @@ Scenario("Cancel Restaurant", async ({ I }) => {
 
   I.seeElement(".detailResto");
   I.click(".like");
+
+  I.seeElement(".list");
+  I.click(".nav__item_fav");
+
+  I.dontSeeElement(".resto");
 });
